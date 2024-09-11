@@ -1,0 +1,144 @@
+/* Reset body margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5; /* Light background for fallback */
+}
+
+/* Full-screen background image */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg') no-repeat center center fixed;
+    background-size: cover; /* Cover the entire viewport */
+    opacity: 0.5; /* Adjust opacity for transparency */
+    z-index: -1; /* Ensure it stays behind all content */
+}
+
+/* Centering login section */
+#login-section {
+    display:flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for form */
+}
+
+/* Login form styling */
+#login-form {
+    background-color: rgba(255, 255, 255, 0.9); /* White with 90% opacity */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Prevent form from being too wide */
+    text-align: center;
+}
+
+/* Input styling */
+#login-form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Button styling */
+#login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #45a049;
+}
+
+
+
+header h1 {
+    margin: 0;
+}
+
+/* Dark mode toggle button */
+#dark-mode-toggle {
+    background-color: #1f1f1f;
+    color: rgb(240, 226, 226);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dark-mode body {
+    background-color: #1c1c1c; /* Dark background color for dark mode */
+     /* Adjust transparency for dark mode */
+}
+
+.dark-mode #dark-mode-toggle {
+    background-color: #353535;
+}
+
+/* Project section styling */
+#projects {
+    padding: 20px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.task-list .task {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.task-list .task .comment-section {
+    margin-top: 10px;
+}
+
+.comment-section input[type="text"] {
+    width: calc(100% - 60px);
+}
+
+.comment-section button {
+    width: 60px;
+    margin-left: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #login-form {
+        width: 90%;
+        max-width: none;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    .task-list .task {
+        padding: 8px;
+    }
+}
